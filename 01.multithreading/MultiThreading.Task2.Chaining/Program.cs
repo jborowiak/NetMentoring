@@ -6,6 +6,9 @@
  * Fourth Task – calculates the average value. All this tasks should print the values to console.
  */
 using System;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace MultiThreading.Task2.Chaining
 {
@@ -21,9 +24,54 @@ namespace MultiThreading.Task2.Chaining
             Console.WriteLine("Fourth Task – calculates the average value. All this tasks should print the values to console");
             Console.WriteLine();
 
-            // feel free to add your code
+            var task = Task.Run(
+                () =>
+                {
+                    int[] randomArray = new int[10];
+                    for (int i = 0; i < randomArray.Length; i++)
+                    {
+                        randomArray[i] = new Random().Next(100);
+                    }
+                    ShowArray(randomArray);
+                    return randomArray;
+                })
+                .ContinueWith(
+                antecedent =>
+                {
+                    var multiplier = new Random().Next(10);
+                    for (int i = 0; i < antecedent.Result.Length; i++)
+                    {
+                        antecedent.Result[i] = antecedent.Result[i] * multiplier;
+                    }
+                    ShowArray(antecedent.Result);
+                    return antecedent;
+                }, TaskContinuationOptions.OnlyOnRanToCompletion)
+                .Unwrap().ContinueWith(
+                antecedent =>
+                {
+                    var sortedArray = antecedent.Result.OrderBy(x => x).ToArray();
+                    ShowArray(sortedArray);
+                    return sortedArray;
+                }, TaskContinuationOptions.OnlyOnRanToCompletion)
+                .ContinueWith(
+                antecedent =>
+                {
+                    var sum = antecedent.Result.Sum();
+                    var avg = sum / antecedent.Result.Length;
+                    Console.WriteLine("Average value = " + avg);
+                    return avg;
+                }, TaskContinuationOptions.OnlyOnRanToCompletion);
 
-            Console.ReadLine();
+            task.Wait();
+        }
+
+        static void ShowArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"{array[i]} | ");
+            }
+            Console.WriteLine();
         }
     }
 }
