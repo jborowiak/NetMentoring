@@ -9,3 +9,16 @@ D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task5.Threads.Shar
 D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.AssemblyInfo.cs
 D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.dll
 D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.pdb
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.deps.json
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.runtimeconfig.json
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.runtimeconfig.dev.json
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.dll
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.pdb
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.csproj.AssemblyReference.cache
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.AssemblyInfoInputs.cache
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.AssemblyInfo.cs
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.csproj.CoreCompileInputs.cache
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.dll
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.pdb
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.genruntimeconfig.cache

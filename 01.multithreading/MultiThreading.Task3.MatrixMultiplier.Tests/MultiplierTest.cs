@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MultiThreading.Task3.MatrixMultiplier.Matrices;
 using MultiThreading.Task3.MatrixMultiplier.Multipliers;
@@ -15,11 +18,56 @@ namespace MultiThreading.Task3.MatrixMultiplier.Tests
             TestMatrix3On3(new MatricesMultiplierParallel());
         }
 
+        //The performance is better even for 2
         [TestMethod]
         public void ParallelEfficiencyTest()
         {
-            // todo: implement a test method to check the size of the matrix which makes parallel multiplication more effective than
-            // todo: the regular one
+            const int sizeOfMatrix = 2;
+            const int numberOfTestTrials = 10;
+
+            Matrix firstMatrix;
+            Matrix secondMatrix;
+
+            var stopWatch = new Stopwatch();
+            var standardMultiplier = new MatricesMultiplier();
+
+
+            var standardMultiplierTimes = new List<long>();
+
+            for (int i = 0; i < numberOfTestTrials; i++)
+            {
+                firstMatrix = new Matrix(sizeOfMatrix, sizeOfMatrix);
+                secondMatrix = new Matrix(sizeOfMatrix, sizeOfMatrix);
+
+                stopWatch.Start();
+                standardMultiplier.Multiply(firstMatrix, secondMatrix);
+                stopWatch.Stop();
+                standardMultiplierTimes.Add(stopWatch.ElapsedTicks);
+
+                stopWatch.Reset();
+            }
+
+            var parallelMultiplier = new MatricesMultiplier();
+
+            var parallelMultiplierTimes = new List<long>();
+
+            for (int i = 0; i < numberOfTestTrials; i++)
+            {
+                firstMatrix = new Matrix(sizeOfMatrix, sizeOfMatrix);
+                secondMatrix = new Matrix(sizeOfMatrix, sizeOfMatrix);
+
+                stopWatch.Start();
+                parallelMultiplier.Multiply(firstMatrix, secondMatrix);
+                stopWatch.Stop();
+                parallelMultiplierTimes.Add(stopWatch.ElapsedTicks);
+                
+                stopWatch.Reset();
+            }
+
+            var standardResult = standardMultiplierTimes.Average();
+            var parallelResult = parallelMultiplierTimes.Average();
+
+            Assert.IsTrue(parallelResult < standardResult);
         }
 
         #region private methods

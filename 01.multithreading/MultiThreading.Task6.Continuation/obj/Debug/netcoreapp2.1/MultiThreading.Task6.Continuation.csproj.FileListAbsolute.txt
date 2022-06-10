@@ -8,3 +8,16 @@ D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task6.Continuation
 D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.AssemblyInfo.cs
 D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.dll
 D:\EPAM\Mentoring\Anastasiya\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.pdb
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.deps.json
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.runtimeconfig.json
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.runtimeconfig.dev.json
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.dll
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.pdb
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.csproj.AssemblyReference.cache
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.AssemblyInfoInputs.cache
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.AssemblyInfo.cs
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.csproj.CoreCompileInputs.cache
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.dll
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.pdb
+C:\Users\Jan_Borowiak\Desktop\NetMentoring\01.multithreading\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.genruntimeconfig.cache
