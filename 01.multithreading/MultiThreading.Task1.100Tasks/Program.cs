@@ -31,13 +31,13 @@ namespace MultiThreading.Task1._100Tasks
         {
             Task[] taskArray = new Task[TaskAmount];
             for(int i = 0; i < taskArray.Length; i++) {
-                taskArray[i] = Task.Factory.StartNew(() => {
-                   
-                    for (int j = 0; j < MaxIterationsCount; j++)
+                taskArray[i] = Task.Factory.StartNew((object obj) => {
+                    var data = obj as CustomData;
+                    for (var j = 0; j < MaxIterationsCount; j++)
                     {
-                        Output(i, j);
+                        Output(data.TaskNumber, j);
                     }
-                });
+                }, new CustomData() { TaskNumber = i });
             }
             Task.WaitAll(taskArray);
         }
@@ -46,5 +46,10 @@ namespace MultiThreading.Task1._100Tasks
         {
             Console.WriteLine($"Task #{taskNumber} – {iterationNumber}");
         }
+    }
+
+    internal class CustomData
+    {
+        public int TaskNumber { get; set; }
     }
 }

@@ -46,7 +46,8 @@ namespace MultiThreading.Task2.Chaining
                     ShowArray(antecedent.Result);
                     return antecedent;
                 }, TaskContinuationOptions.OnlyOnRanToCompletion)
-                .Unwrap().ContinueWith(
+                .Unwrap()
+                .ContinueWith(
                 antecedent =>
                 {
                     var sortedArray = antecedent.Result.OrderBy(x => x).ToArray();
@@ -65,12 +66,13 @@ namespace MultiThreading.Task2.Chaining
             task.Wait();
         }
 
-        static void ShowArray(int[] array)
+        private static void ShowArray(int[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            foreach (var t in array)
             {
-                Console.Write($"{array[i]} | ");
+                Console.Write($"{t} | ");
             }
+
             Console.WriteLine();
         }
     }
