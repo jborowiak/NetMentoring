@@ -24,6 +24,8 @@ namespace MultiThreading.Task6.Continuation
             Console.WriteLine("Demonstrate the work of the each case with console utility.");
             Console.WriteLine();
 
+            /// NOT FINISHED
+
             var task = Task.Run(() =>
                 {
                     Console.WriteLine("Parent task start");
