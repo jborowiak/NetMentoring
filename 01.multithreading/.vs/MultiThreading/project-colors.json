@@ -5,7 +5,42 @@
       "ProjectGuid": "5cc3d09b-1941-4c28-bdb8-a62bc6bf07b6",
       "DisplayName": "MultiThreading.Task1.100Tasks",
       "ColorIndex": 0
+    },
+    "0d02d53f-b27c-4185-9be7-4c83e7783234": {
+      "ProjectGuid": "0d02d53f-b27c-4185-9be7-4c83e7783234",
+      "DisplayName": "MultiThreading.Task2.Chaining",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "385391b2-1a7a-4dc7-863d-5a6a0d5400e3": {
+      "ProjectGuid": "385391b2-1a7a-4dc7-863d-5a6a0d5400e3",
+      "DisplayName": "MultiThreading.Task3.MatrixMultiplier",
+      "ColorIndex": 2
+    },
+    "10cb1471-fe3f-4a2e-8938-d7f1b5ceaa37": {
+      "ProjectGuid": "10cb1471-fe3f-4a2e-8938-d7f1b5ceaa37",
+      "DisplayName": "MultiThreading.Task3.MatrixMultiplier.Tests",
+      "ColorIndex": 3
+    },
+    "5231083a-4936-4cc4-87fe-cfa228aa372d": {
+      "ProjectGuid": "5231083a-4936-4cc4-87fe-cfa228aa372d",
+      "DisplayName": "MultiThreading.Task6.Continuation",
+      "ColorIndex": 4
+    },
+    "3f6e503a-3bd1-4117-803f-de3a1d3d72ee": {
+      "ProjectGuid": "3f6e503a-3bd1-4117-803f-de3a1d3d72ee",
+      "DisplayName": "MultiThreading.Task5.Threads.SharedCollection",
+      "ColorIndex": 5
+    },
+    "3c9627be-0041-493d-b2ca-c8cd6b4bb3f5": {
+      "ProjectGuid": "3c9627be-0041-493d-b2ca-c8cd6b4bb3f5",
+      "DisplayName": "MultiThreading.Task4.Threads.Join",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 7
 }
