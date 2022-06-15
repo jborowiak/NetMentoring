@@ -16,7 +16,7 @@ namespace MultiThreading.Task4.Threads.Join
 {
     class Program
     {
-        static SemaphoreSlim semaphoreSlim = new SemaphoreSlim(1);
+        static Semaphore semaphoreSlim = new Semaphore(1,1);
 
         static void Main(string[] args)
         {
@@ -36,17 +36,12 @@ namespace MultiThreading.Task4.Threads.Join
             Thread t = new Thread(tws.Process);
             t.Start();
             t.Join();
-
-            Console.ReadLine();
             // End of option a)
-
 
             Console.WriteLine("Start of option b)");
             // Option b)
             var stateB = 10;
-            semaphoreSlim.Wait();
-            ThreadPool.QueueUserWorkItem(new WaitCallback(ProcessB), stateB);
-            semaphoreSlim.Release();
+            ThreadPool.QueueUserWorkItem(ProcessB, stateB);
 
 
             // End of option b)
@@ -55,17 +50,19 @@ namespace MultiThreading.Task4.Threads.Join
 
         public static void ProcessB(object state)
         {
+            semaphoreSlim.WaitOne();
+            Thread.Sleep(100);
             Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId}, State before decrement: {state}");
             state = (int)state - 1;
             Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId}, State after decrement: {state}");
 
             if ((int)state > 1)
             {
-                semaphoreSlim.Wait();
-                ThreadPool.QueueUserWorkItem(new WaitCallback(ProcessB), state);
-                semaphoreSlim.Release();
+                
+                ThreadPool.QueueUserWorkItem(ProcessB, state);
+                
             }
-
+            semaphoreSlim.Release();
         }
     }
 
@@ -81,7 +78,8 @@ namespace MultiThreading.Task4.Threads.Join
 
         public void Process()
         {
-            Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId}, State before decrement: {_state}");
+            Thread.Sleep(100);
+            Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId}, State before decrement: {_state}");     
             _state = _state - 1;
             Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId}, State after decrement: {_state}");
 
