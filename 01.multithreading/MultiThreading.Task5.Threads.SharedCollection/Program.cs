@@ -6,6 +6,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MultiThreading.Task5.Threads.SharedCollection
@@ -13,6 +14,7 @@ namespace MultiThreading.Task5.Threads.SharedCollection
     class Program
     {
         private static List<int> _sharedCollection = new List<int>();
+        private static bool _isAddingCompleted = false;
 
         static void Main(string[] args)
         {
@@ -25,23 +27,38 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 
             var task1 = Task.Run(() =>
             {
-                for (int i = 0; i <= 10; i++)
+                for (int i = 1; i <= 10; i++)
                 {
                     _sharedCollection.Add(i);
+                    Thread.Sleep(1000); //This is optional
                 }
+
+                _isAddingCompleted = true;
+                
             });
 
-            var task2 = task1.ContinueWith(antecedent =>
+            var task2 = Task.Run(() =>
             {
-                for (int i = 0; i < _sharedCollection.Count; i++)
+                int nextPrintedEkementIndex = 0;
+                while(_isAddingCompleted == false || nextPrintedEkementIndex < _sharedCollection.Count)
                 {
-                    Console.Write("[");
-                    for (int j = 0; j <= i; j++)
+                    if(nextPrintedEkementIndex < _sharedCollection.Count)
                     {
-                        Console.Write($"{_sharedCollection[j]}, ");
+                        Console.Write("[");
+                        for (int j = 0; j <= nextPrintedEkementIndex; j++)
+                        {
+                            Console.Write($"{_sharedCollection[j]}");
+                            if (j < nextPrintedEkementIndex)
+                            {
+                                Console.Write(", ");
+                            }
+                        }
+                        Console.Write("]");
+                        Console.WriteLine();
+
+                        nextPrintedEkementIndex++;
                     }
-                    Console.Write("]");
-                }
+                }              
             });
 
             Task.WaitAll(task2);
