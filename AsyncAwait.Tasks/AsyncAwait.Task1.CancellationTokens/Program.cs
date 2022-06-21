@@ -52,8 +52,7 @@ internal class Program
     }
 
     private static void CalculateSum(int n)
-    {
-        
+    {  
         if (previousCallFinished == false)
         {
             cancellationTokenSource.Cancel();
