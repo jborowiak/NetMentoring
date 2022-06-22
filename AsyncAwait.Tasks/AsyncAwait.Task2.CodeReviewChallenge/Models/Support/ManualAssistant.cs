@@ -21,7 +21,8 @@ public class ManualAssistant : IAssistant
         {
             var t = _supportService.RegisterSupportRequestAsync(requestInfo);
             Console.WriteLine(t.Status); // this is for debugging purposes
-            Thread.Sleep(5000); // this is just to be sure that the request is registered
+            /* Thread.Sleep(5000);*/ // this is just to be sure that the request is registered //JB: This can be replaced with "await" - it will make sure that the request is registered. Or even we could use ContinueWith
+            await t;
             return await _supportService.GetSupportInfoAsync(requestInfo)
                 .ConfigureAwait(false);
         }
